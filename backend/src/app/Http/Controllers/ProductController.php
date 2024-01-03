@@ -31,6 +31,7 @@ class ProductController extends Controller
             'reference_code' => 'integer',
             'stock_quantity' => 'required|integer',
             'weight' => 'required|numeric',
+            'category_id' => 'required|integer',
         ];
         $validator = Validator::make($data, $rules);
         if ($validator->passes()) {
@@ -74,5 +75,10 @@ class ProductController extends Controller
         Product::findOrFail($id)->delete();
 
         return response()->json(['message' => 'Produto excluído com sucesso']);
+    }
+
+    public function productsByCategory($category)
+    {
+        return new ProductCollection(Product::where('category_id', $category)->get());
     }
 }

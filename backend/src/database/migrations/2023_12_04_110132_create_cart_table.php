@@ -16,7 +16,6 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->decimal('total', 10, 2)->default(0.00);
             $table->timestamps();
-
             $table->foreign('user_id')->references('id')->on('users');
         });
     }

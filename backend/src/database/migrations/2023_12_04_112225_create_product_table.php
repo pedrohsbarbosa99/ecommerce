@@ -16,6 +16,8 @@ class CreateProductTable extends Migration
             $table->string('reference_code')->unique()->nullable();;
             $table->integer('stock_quantity');
             $table->float('weight');
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('category');
             $table->timestamps();
         });
     }

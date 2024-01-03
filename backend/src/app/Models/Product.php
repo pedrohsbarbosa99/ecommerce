@@ -15,5 +15,6 @@ class Product extends Model
         'reference_code',
         'stock_quantity',
         'weight',
+        'category_id',
     ];
 }
