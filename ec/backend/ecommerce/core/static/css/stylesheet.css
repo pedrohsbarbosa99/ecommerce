@@ -1,0 +1,8 @@
+.card {
+    margin-bottom: 20px;
+  }
+
+.item-details {
+display: flex;
+justify-content: space-between;
+}

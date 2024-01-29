@@ -1,0 +1,70 @@
+{% load static %}
+<html>
+<head>
+  <script src="https://sdk.mercadopago.com/js/v2">
+  </script>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/stylesheet.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6  mt-5">
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                      <div>
+                        <img
+                          src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                          class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                      </div>
+                      <div class="ms-3">
+                        <h5>Iphone 11 pro</h5>
+                        <p class="small mb-0">256GB, Navy Blue</p>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center">
+                      <div style="width: 50px;">
+                        <h5 class="fw-normal mb-0">2</h5>
+                      </div>
+                      <div style="width: 80px;">
+                        <h5 class="mb-0">R$900</h5>
+                      </div>
+                      <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+                <div id="paymentBrick_container"></div>
+                <div class="d-flex justify-content-between">
+                    <p>Subtotal</p>
+                    <p>$4798.00</p>
+                  </div>
+
+                  <div class="d-flex justify-content-between">
+                    <p>Shipping</p>
+                    <p>$20.00</p>
+                  </div>
+
+                  <div class="d-flex justify-content-between">
+                    <p>Total(Incl. taxes)</p>
+                    <p>$4818.00</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/checkout.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
